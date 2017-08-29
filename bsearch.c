@@ -5,10 +5,10 @@ int lower_bound(int A[], int n, int c) {
     int r = n;
     while (l < r) {
         int m = (r-l)/2+l; //prevents integer overflow
-        if (A[m] < c) l = m+1; else r = m;
+        if (A[m] <= c) l = m+1; else r = m;
     }
     return l;
-
+}
  
 int upper_bound(int A[], int n, int c) {
     int l = 0;
